@@ -1,22 +1,19 @@
 {
-	"name": "albums",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"start": "node node_modules/react-native/local-cli/cli.js start",
-		"test": "jest"
-	},
-	"dependencies": {
-		"react": "16.0.0-alpha.12",
-		"react-native": "0.47.1"
-	},
-	"devDependencies": {
-		"babel-jest": "20.0.3",
-		"babel-preset-react-native": "2.1.0",
-		"jest": "20.0.4",
-		"react-test-renderer": "16.0.0-alpha.12"
-	},
-	"jest": {
-		"preset": "react-native"
-	}
+  "name": "tetris_multiplayer",
+  "version": "1.0.0",
+  "description": "Steps to run application:",
+  "main": "client/main.js",
+  "dependencies": {
+    "bufferutil": "3.0.3",
+    "express": "4.16.2",
+    "utf-8-validate": "4.0.0",
+    "ws": "3.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/main.js"
+  },
+  "author": "",
+  "license": "ISC"
 }
