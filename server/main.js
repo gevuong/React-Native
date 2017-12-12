@@ -7,7 +7,7 @@ const Client = require('./client');
 
 // const server = new WebSocketServer({ port: 9000 });
 const PORT = process.env.PORT || 9000;
-const INDEX = path.join('index.html');
+const INDEX = path.join(__dirname, 'index.html');
 
 // create an HTTP server to do two things: serve our client-side assets and provide a hook for the WebSocket server to monitor for upgrade requests.
 const server = express()
