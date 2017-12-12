@@ -1,5 +1,5 @@
 // add event listener to wait for document to be loaded before loading canvas el.
-// document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
 const tetrisManager = new TetrisManager(document);
 const localTetris = tetrisManager.createPlayer();
 localTetris.element.classList.add('local'); // add class name
@@ -43,4 +43,4 @@ connectionManager.connect('ws://localhost:9000');
 
   document.addEventListener("keydown", keyListener);
   document.addEventListener("keyup", keyListener);
-// })
+})

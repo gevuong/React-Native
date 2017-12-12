@@ -7,13 +7,17 @@ const Client = require('./server/client');
 
 // const server = new WebSocketServer({ port: 9000 });
 const PORT = process.env.PORT || 9000;
-const INDEX = path.join(__dirname, 'index.html');
-
+// const INDEX = path.join(__dirname, 'index.html');
+// console.log("index: ", INDEX);
 // create an HTTP server to do two things: serve our client-side assets and provide a hook for the WebSocket server to monitor for upgrade requests.
 const server = express()
-  .use((req, res) => res.sendFile(INDEX) )
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`
-  ));
+  .use((req, res) => {
+    // res.sendFile(INDEX);
+    res.sendFile(path.resolve("index.html"));
+  })
+  .listen(PORT, () => {
+    console.log(`Listening on ${ PORT }`)
+  });
 
 // create websocket server. WebSocket server takes a HTTP server as an arg so that it can listen for 'upgrade' events
 const wss = new WebSocketServer({ server });
