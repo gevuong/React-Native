@@ -2,8 +2,8 @@ const express = require('express');
 const WebSocketServer = require('ws').Server;
 const path = require('path');
 
-const Session = require('./session');
-const Client = require('./client');
+const Session = require('./server/session');
+const Client = require('./server/client');
 
 // const server = new WebSocketServer({ port: 9000 });
 const PORT = process.env.PORT || 9000;
